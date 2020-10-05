@@ -1,0 +1,357 @@
+/*
+  1-Common Styles
+  2-General Style
+  3-Sections
+    3.0 header section
+    3.1 Home Section 
+    3.2 Services Section 
+    3.3 Portfolio Section 
+    3.4 About Section
+    3.5 Team Section 
+    3.6 Contact Section
+*/
+
+/* 1-Common Styles */
+/*
+    -container
+    -hero-image
+    -opacity hover
+    -section header
+    -section padding
+    -colors
+    -btn
+*/
+
+
+
+/* General Style  */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Times New Roman', sans-serif;
+  color: var(--col-bl);
+}
+h1, h2, h3, h4, h5, h6, button, input,textarea, a{
+  font-family: 'Merriweather Sans', sans-serif;
+}
+.container{
+  width: 85%;
+  margin: auto;
+}
+.clear{
+  clear: both;
+}
+.section-header{
+  text-align: center;
+}
+.section-header .section-title{
+  font-size: 40px;
+  margin-bottom: 10px;
+  font-weight: 800;
+}
+.section-header .header-text ,.desc{
+  color: var(--col-gray);
+  font-size: 20px;
+  font-style: italic;
+  line-height: 1.6;
+  
+}
+.hover-opacity{
+opacity: .9;
+}
+.hover-opacity:hover{
+  opacity: 1;
+}
+a{
+  text-decoration: none;
+}
+.padd-y{
+  padding: 100px 0;
+}
+/* hero image */
+.pos-rel{
+  position: relative;
+}
+.pos-abs{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+:root{
+  --col-yel : #fed136;
+  --col-whi : #fff;
+  --col-whi-d : #f8f9fa;
+  --col-gray : #6c757d;
+  --col-gray-l : #e9ecef;
+  
+  --col-bl : #212529;
+}
+ul{
+  list-style: none;
+}
+.btn{
+  width: 250px;
+  padding: 20px 0;
+  cursor: pointer;
+  font-size: 22px;
+  background-color: var(--col-yel);
+  color: var(--col-whi);
+  font-weight: 600;
+  border: 0;
+  border-radius: 5px;
+  transition: opacity .5s;
+  cursor: pointer;
+}
+/* Sections */
+
+/* 3.0 header section */
+header{
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  color: var(--col-whi);
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+header .logo{
+  width: 40%;
+  float: left;
+  padding: 20px 0;
+}
+header .logo img{
+  width: 45%;
+  cursor: pointer;
+}
+header nav{
+  width: 60%;
+  float: left;
+}
+header nav ul{
+  text-align: right;
+}
+header nav ul li{
+  display: inline-block;
+}
+header nav  ul li a{
+  display: block;
+  padding: 30px 13px;
+  color: var(--col-whi);
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+header nav  ul li a:hover{
+  color: var(--col-yel);
+}
+/* 3.1 Home Section */
+.home{
+  background-image: url(../images/header-bg.jpg);
+  height: 120vh;
+  background-size: cover;
+  background-position: center;
+}
+.home-content{
+  text-align: center;
+  width: 65%;
+  color: var(--col-whi);
+}
+.home-content-welcome{
+  font-size: 40px;
+  font-style: italic;
+  font-weight: 400;
+}
+.home .title{
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 72px;
+}
+
+/* Services Section */
+.services-item{
+  text-align: center;
+}
+.services-item-icon{
+  background-color: var(--col-yel);
+  width: 130px;
+  height: 130px;
+  margin: auto; 
+  border-radius: 50%;
+}
+.services-item-icon .icon{
+  line-height: 130px;
+  color: var(--col-whi);
+}
+/* Portfolio Section */
+.portfolio{
+  background-color: var(--col-whi-d);
+}
+.portfolio-item{
+  text-align: center;
+  background-color: var(--col-whi);
+  padding-bottom: 30px;
+}
+.portfolio-item-img{
+  height: 300px;
+}
+.portfolio-item-img img{
+  width: 100%;
+  height: 100%;
+}
+.portfolio-item-img-overlay{
+  position: absolute;
+  background-color: rgba(240, 171, 24, 0.801);
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .5s;
+  color: var(--col-whi);
+}
+.portfolio-item-img:hover .portfolio-item-img-overlay{
+  opacity: 1;
+  visibility: visible;
+}
+/* About Section */
+.about-content{
+  position: relative;
+  overflow: hidden;
+}
+.about-border{
+  width: 100%;
+  height: 105%;
+  border-left: 2px solid  var(--col-gray-l) ;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  margin-bottom: 100px;
+}
+.about-item-img{
+  height: 180px;
+  position: absolute;
+  border-radius: 50%;
+  background-color: var(--col-yel);
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 180px;
+  border: 5px solid var(--col-gray-l);
+}
+.about-content-item .about-item-img img{
+  height: 100%;
+  border-radius: 50%;
+}
+.about-item-text{
+  border: 5px solid var(--col-gray-l);
+  height: 180px;
+  width: 180px;
+  background-color: var(--col-yel);
+  border-radius: 50%;
+  margin: auto;
+
+}
+.about-item-img-text{
+  color: var(--col-whi);
+  font-size: 20px;
+  line-height: 1.5;
+}
+.about-item-content{
+  width: 50%;
+  padding: 0 120px ;
+}
+.about-ittem-content-desc{
+  padding-bottom: 80px;
+}
+/* Team Section */
+.team{
+  background-color: var(--col-whi-d);
+}
+.team-item-img{
+  width: 250px;
+  height: 250px;
+  border: 8px solid var(--col-gray-l);
+  border-radius: 50%;
+}
+.team-item-text{
+  color: var(--col-gray);
+  font-size: 20px;
+  line-height: 1.6;
+  display: block;
+  margin: auto;
+}
+.social-list li{
+  display: inline-block;
+  margin: 5px;
+}
+.social-list li a{
+  display: block;
+  width: 40px;
+  height: 40px;
+  line-height: 50px;
+  background-color: var(--col-bl);
+  border-radius: 50%;
+}
+.social-list li a .icon{
+  color: var(--col-whi);
+  line-height: 40px;
+  font-size: 20px;
+  transition: opacity .5s;
+}
+/* Contact Section */
+.contact{
+  background-color: var(--col-bl);
+  background-image: url(../images/map-image.png);
+  background-position: center;
+}
+.contact .section-title{
+  color: var(--col-whi);
+}
+.contact-form,.contact-massage{
+  width: 49%;
+  height: 225px;
+}
+.contact-form input, 
+.contact-massage textarea{
+  width: 100%;
+  padding: 20px;
+  font-weight: bold;
+  border-radius: 10px;
+  border: 2px solid var(--col-gray);
+}
+.contact-massage textarea{
+  height: 100% ;
+}
+.contact-form input:focus,
+.contact-massage textarea:focus{
+  border: 3px solid var(--col-yel);
+  outline: 0;
+}
+/* Footer Section */
+footer{
+  padding: 30px 0;
+  text-align: center;
+}
+.copyright{
+  font-family: 'Merriweather Sans', sans-serif;
+  font-weight: 300;
+  line-height: 40px;
+}
+.footer-item{
+  width: 30%;
+  height: 40px;
+  float: left;
+}
+.policy li{
+  display: inline-block;
+  margin: 0px 10px;
+}
+.policy li a{
+  line-height: 40px;
+  color: var(--col-yel);
+}
+.policy li a:hover{
+  text-decoration: underline;
+}
